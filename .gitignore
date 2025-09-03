@@ -1,0 +1,135 @@
+# This is a template .gitignore file for git-managed WordPress projects.
+#
+# Fact: you don't want WordPress core files, or your server-specific
+# configuration files etc., in your project's repository. You just don't.
+#
+# Solution: stick this file up your repository root (which it assumes is
+# also the WordPress root directory) and add exceptions for any plugins,
+# themes, and other directories that should be under version control.
+#
+# See the comments below for more info on how to add exceptions for your
+# content. Or see git's documentation for more info on .gitignore files:
+# http://kernel.org/pub/software/scm/git/docs/gitignore.html
+
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
+
+# Ignore everything in the "wp-content" directory, except the "plugins"
+# and "themes" directories.
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in the "plugins" directory, except the plugins you
+# specify (see the commented-out examples for hints on how to do this.)
+wp-content/plugins/*
+
+!wp-content/plugins/elementor-pro
+wp-content/plugins/elementor-pro/*
+!wp-content/plugins/elementor-pro/modules
+wp-content/plugins/elementor-pro/modules/*
+!wp-content/plugins/elementor-pro/modules/social
+wp-content/plugins/elementor-pro/modules/social/*
+!wp-content/plugins/elementor-pro/modules/social/widgets
+wp-content/plugins/elementor-pro/modules/social/widgets/*
+!wp-content/plugins/elementor-pro/modules/social/widgets/facebook-embed.php
+
+!wp-content/plugins/wc-frontend-manager-ultimate
+wp-content/plugins/wc-frontend-manager-ultimate/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/controllers
+wp-content/plugins/wc-frontend-manager-ultimate/controllers/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/controllers/orders
+wp-content/plugins/wc-frontend-manager-ultimate/controllers/orders/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/controllers/orders/wcfm-controller-orders-manage.php
+!/wp-content/plugins/wc-frontend-manager-ultimate/controllers/orders/wcfmu-controller-orders-manage-add-customer.php
+!/wp-content/plugins/wc-frontend-manager-ultimate/views
+wp-content/plugins/wc-frontend-manager-ultimate/views/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/views/orders
+wp-content/plugins/wc-frontend-manager-ultimate/views/orders/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/views/orders/wcfmu-view-orders-add-customer.php
+!/wp-content/plugins/wc-frontend-manager-ultimate/assets
+wp-content/plugins/wc-frontend-manager-ultimate/assets/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/assets/js
+wp-content/plugins/wc-frontend-manager-ultimate/assets/js/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/assets/js/orders
+wp-content/plugins/wc-frontend-manager-ultimate/assets/js/orders/*
+!/wp-content/plugins/wc-frontend-manager-ultimate/assets/js/orders/wcfmu-script-orders-manage.js
+
+!wp-content/plugins/wc-frontend-manager-affiliate
+wp-content/plugins/wc-frontend-manager-affiliate/*
+!wp-content/plugins/wc-frontend-manager-affiliate/core
+wp-content/plugins/wc-frontend-manager-affiliate/core/*
+!wp-content/plugins/wc-frontend-manager-affiliate/core/class-wcfmaf-frontend.php
+
+!wp-content/plugins/wc-frontend-manager
+wp-content/plugins/wc-frontend-manager/*
+!wp-content/plugins/wc-frontend-manager/core
+wp-content/plugins/wc-frontend-manager/core/*
+!wp-content/plugins/wc-frontend-manager/core/class-wcfm-ajax.php
+!wp-content/plugins/wc-frontend-manager/core/class-wcfm-vendor-support.php
+!wp-content/plugins/wc-frontend-manager/controllers
+wp-content/plugins/wc-frontend-manager/controllers/*
+!wp-content/plugins/wc-frontend-manager/controllers/vendors
+wp-content/plugins/wc-frontend-manager/controllers/vendors/*
+!wp-content/plugins/wc-frontend-manager/controllers/vendors/wcfm-controller-vendors.php
+!wp-content/plugins/wc-frontend-manager/views
+wp-content/plugins/wc-frontend-manager/views/*
+!wp-content/plugins/wc-frontend-manager/views/vendors
+wp-content/plugins/wc-frontend-manager/views/vendors/*
+!wp-content/plugins/wc-frontend-manager/views/vendors/wcfm-view-vendors.php
+!wp-content/plugins/wc-frontend-manager/assets
+wp-content/plugins/wc-frontend-manager/assets/*
+!wp-content/plugins/wc-frontend-manager/assets/js
+wp-content/plugins/wc-frontend-manager/assets/js/*
+!wp-content/plugins/wc-frontend-manager/assets/js/vendors
+wp-content/plugins/wc-frontend-manager/assets/js/vendors/*
+!wp-content/plugins/wc-frontend-manager/assets/js/vendors/wcfm-script-vendors.js
+
+!wp-content/plugins/jet-engine
+wp-content/plugins/jet-engine/*
+
+!wp-content/plugins/jet-engine/includes
+wp-content/plugins/jet-engine/includes/*
+!wp-content/plugins/jet-engine/includes/modules
+wp-content/plugins/jet-engine/includes/modules/*
+!wp-content/plugins/jet-engine/includes/modules/forms
+wp-content/plugins/jet-engine/includes/modules/forms/*
+!wp-content/plugins/jet-engine/includes/modules/forms/preset.php
+!wp-content/plugins/jet-engine/includes/components
+wp-content/plugins/jet-engine/includes/components/*
+!wp-content/plugins/jet-engine/includes/components/listings
+wp-content/plugins/jet-engine/includes/components/listings/*
+!wp-content/plugins/jet-engine/includes/components/listings/data.php
+!wp-content/plugins/jet-engine/framework
+wp-content/plugins/jet-engine/framework/*
+!wp-content/plugins/jet-engine/framework/interface-builder
+wp-content/plugins/jet-engine/framework/interface-builder/*
+!wp-content/plugins/jet-engine/framework/interface-builder/inc
+wp-content/plugins/jet-engine/framework/interface-builder/inc/*
+!wp-content/plugins/jet-engine/framework/interface-builder/inc/controls
+wp-content/plugins/jet-engine/framework/interface-builder/inc/controls/*
+!wp-content/plugins/jet-engine/framework/interface-builder/inc/controls/repeater.php
+
+!wp-content/plugins/jet-engine/assets
+wp-content/plugins/jet-engine/assets/*
+!wp-content/plugins/jet-engine/assets/js
+wp-content/plugins/jet-engine/assets/js/*
+!wp-content/plugins/jet-engine/assets/js/admin
+wp-content/plugins/jet-engine/assets/js/admin/*
+!wp-content/plugins/jet-engine/assets/js/admin/meta-boxes.js
+
+!wp-content/plugins/jet-appointments-booking
+wp-content/plugins/jet-appointments-booking/*
+!wp-content/plugins/jet-appointments-booking/includes
+wp-content/plugins/jet-appointments-booking/includes/*
+!wp-content/plugins/jet-appointments-booking/includes/rest-api
+wp-content/plugins/jet-appointments-booking/includes/rest-api/*
+!wp-content/plugins/jet-appointments-booking/includes/rest-api/endpoint-add-appointment.php
+
+# Ignore everything in the "themes" directory, except the themes you
+# specify (see the commented-out example for a hint on how to do this.)
+wp-content/themes/*
+wp-content/themes/woodmart-child/vendor
+!wp-content/themes/woodmart-child/
