@@ -151,6 +151,8 @@ $patients_db = getPatientsByAuthor($current_user->ID);
                         </div>
                     </div>
                 </div>
+
+                <!--Añadir PRECIO CONSULTA Y MÉTODO DE PAGO -- Luciano Bances -->
                 <?php
                 $cx_interface_builder->register_control([
                     'service_id' => [
@@ -210,6 +212,35 @@ $patients_db = getPatientsByAuthor($current_user->ID);
                             'required' => 'required',
                         ],
                     ],
+                    # NUEVOS CAMPOS EN LA MISMA FILA
+'precio_metodo_wrapper' => [
+    'type' => 'html',
+    'content' => '
+        <div style="display: flex; gap: 15px; align-items: flex-end;">
+
+            <div style="flex: 1;">
+                <label for="precio_consulta">Precio consulta:</label>
+                <input type="number" 
+                       id="precio_consulta" 
+                       name="precio_consulta" 
+                       class="cx-ui-input" 
+                       placeholder="Ingrese precio" 
+                       required />
+            </div>
+
+            <div style="flex: 1;">
+                <label for="metodo_pago">Método de pago:</label>
+                <select id="metodo_pago" name="metodo_pago" class="cx-ui-select" required>
+                    <option value="">Seleccione</option>
+                    <option value="tarjeta">Tarjeta</option>
+                    <option value="yape">Yape</option>
+                    <option value="plin">Plin</option>
+                </select>
+            </div>
+
+        </div>
+    ',
+],
                     'observations' => [
                         'type' => 'textarea',
                         'label' => 'Observaciones',

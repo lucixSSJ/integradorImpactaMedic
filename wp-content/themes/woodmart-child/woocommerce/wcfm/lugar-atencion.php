@@ -55,6 +55,34 @@ $default_apb = getDefaultApb($id);
                     <cx-vui-colorpicker class="jet-apb-working-hours__main-settings" label="Color de Citas"
                         :wrapper-css="[ 'equalwidth' ]" type="hex" v-model="formData.meta.color"></cx-vui-colorpicker>
                 </div>
+
+                <!--Implementación de PRECIO BASE Y FORMA DE PAGO -- Luciano Bances -->
+                <div class="col-sm-6 col-lg-4 jet-apb-day-custom-schedule">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="cx-vui-component__meta">
+                                <label class="cx-vui-component__label">Precio base:</label>
+                                <input type="number"
+                                    v-model="apbPostMeta.custom_schedule.base_price" 
+                                    class="cx-vui-input" 
+                                    placeholder="Ingrese el precio" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="cx-vui-component__meta">
+                                <label class="cx-vui-component__label">Forma de pago:</label>
+                                <select v-model="apbPostMeta.custom_schedule.payment_method" 
+                                        class="cx-vui-select">
+                                    <option disabled value="">Seleccione</option>
+                                    <option value="tarjeta">Tarjeta</option>
+                                    <option value="yape">Yape</option>
+                                    <option value="plin">Plin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="row">
                 <div v-for="(workingHourList, dayName) in apbPostMeta.custom_schedule.working_hours" :key="dayName"
@@ -83,6 +111,7 @@ $default_apb = getDefaultApb($id);
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-12">
                     <h2 class="text-center" style="display: block; float: none;">
                         Configuración de horarios de atención por fecha
