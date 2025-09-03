@@ -1,0 +1,645 @@
+/*
+ Theme Name:   Woodmart Child
+ Description:  Woodmart Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     woodmart
+ Version:      1.1.62
+ Text Domain:  woodmart
+*/
+.wd-info-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--wd-brd-radius);
+}
+
+.wd-info-box .box-icon-wrapper {
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.wd-info-box .info-box-icon {
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.wd-info-box .info-svg-wrapper {
+  display: inline-block;
+}
+
+.wd-info-box .info-svg-wrapper svg {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+.wd-info-box :is(.info-box-subtitle, .info-box-title) {
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+}
+
+.wd-info-box
+  :is(.info-box-subtitle:not(.subtitle-style-background), .info-box-title) {
+  line-height: 1.3;
+}
+
+.wd-info-box .info-box-content {
+  position: relative;
+  flex: 1 1 auto;
+  border-radius: var(--wd-brd-radius);
+}
+
+.wd-info-box .info-box-inner p:first-child:empty,
+.wd-info-box .info-box-inner p:first-child:empty ~ p:last-child {
+  display: none;
+}
+
+.wd-info-box .info-btn-wrapper {
+  margin-top: 15px;
+}
+
+.wd-info-box.color-scheme-hover-light:hover .info-svg-wrapper svg {
+  fill: #fff !important;
+}
+
+.wd-info-box.color-scheme-hover-light:hover :is(.info-box-icon, .title) {
+  color: #fff !important;
+}
+
+.box-icon-align-top .box-icon-wrapper {
+  margin-bottom: 15px;
+}
+
+.box-style-border .info-box-content {
+  padding: 30px;
+  border: 3px solid var(--brdcolor-gray-300);
+}
+
+.box-style-border .box-icon-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.box-style-border:is(.box-icon-align-left, .box-icon-align-right) {
+  align-items: center;
+}
+
+.box-style-border.box-icon-align-left .info-box-content {
+  padding-left: 50px;
+}
+
+.box-style-border.box-icon-align-left .info-box-icon {
+  margin-right: -50px;
+}
+
+.box-style-border.box-icon-align-right .info-box-content {
+  padding-right: 50px;
+}
+
+.box-style-border.box-icon-align-right .info-box-icon {
+  margin-left: -50px;
+}
+
+.box-style-border.box-icon-align-top .box-icon-wrapper {
+  margin-bottom: -25px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.box-style-border.box-icon-align-top .info-box-content {
+  padding-top: 35px;
+}
+
+.box-style-border .info-btn-wrapper {
+  margin-top: 0;
+  margin-bottom: -30px;
+  transform: translateY(50%);
+}
+
+@media (min-width: 1025px) {
+  .box-style-border.box-btn-hover .info-btn-wrapper {
+    margin-top: -15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 0;
+  }
+
+  .box-style-border.box-btn-hover.box-icon-align-left .info-btn-wrapper {
+    margin-left: 50px;
+  }
+
+  .box-style-border.box-btn-hover.box-icon-align-right .info-btn-wrapper {
+    margin-right: 50px;
+  }
+}
+
+.promotor-avatar {
+  display: inline-block;
+}
+
+.promotor-avatar img {
+  min-width: 60px;
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+.promotor-style-boxed .promotor-inner {
+  border-radius: var(--wd-brd-radius);
+  background-color: var(--bgcolor-white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease;
+}
+
+.promotor-style-boxed .promotor-main {
+  padding: 30px;
+}
+
+.promotor-style-boxed .promotor:hover .promotor-inner {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+:is(.promotor-align-left) .promotor-inner .promotor-main {
+  display: flex;
+  align-items: flex-start;
+}
+
+:is(.promotor-align-left) .promotor-main .promotor-avatar {
+  flex: 0 0 auto;
+}
+
+:is(.promotor-align-left) .promotor-main .promotor-content {
+  flex: 1 1 auto;
+}
+
+.promotor-align-left .promotor {
+  text-align: left;
+}
+
+.promotor-align-left .promotor-inner .promotor-main {
+  flex-direction: row;
+}
+
+.promotor-align-left .promotor-avatar {
+  margin-right: 20px;
+}
+
+.promotor-align-left .promotor-inner .promotor-footer {
+  flex-basis: 100%;
+}
+
+.promotor .promotor-footer {
+  background-color: var(--wd-alternative-color);
+  color: white;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.promotor .promotor-footer .promotor-footer-item {
+  padding: 5px 0;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+/* change color of select multiple and increase icon size */
+#wcfm-content .wcfm-collapse-content .select2-selection--multiple:after {
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #d9534f;
+}
+
+.btn-color-danger,
+.btn-color-danger:hover {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+#wcfm-main-contentainer #wcfm-content .btn-color-success,
+#wcfm-main-contentainer #wcfm-content .btn-color-success:hover,
+#colorbox .btn-color-success,
+#colorbox .btn-color-success:hover {
+  color: #fff;
+  background-color: #00b343;
+}
+
+.btn-color-link,
+.btn-color-link:hover {
+  color: #fff;
+  background-color: var(--wd-link-color);
+}
+
+/* increase size of pagination */
+#wcfm-main-contentainer
+  .dataTables_wrapper
+  .dataTables_paginate
+  .paginate_button {
+  padding: 0.5em 0.75em;
+  font-size: 14px;
+}
+
+#wcfm-main-contentainer .dataTables_wrapper .dataTables_info {
+  font-size: 14px;
+  padding-top: 0.4em;
+}
+
+/* force full width for select2 in jet engine fields */
+#wcfm-main-contentainer
+  .cx-ui-repeater-item
+  .cx-ui-container
+  .cx-ui-select-wrapper
+  .select2.select2-container {
+  width: 100% !important;
+  margin: 0;
+}
+
+/* Increase cx checkbox label */
+#wcfm-main-contentainer .cx-ui-container .cx-checkbox-group .cx-checkbox-label {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+#wcfm-main-contentainer .cx-checkbox-item-wrap {
+  margin-bottom: 0;
+}
+
+#wcfm-main-contentainer
+  .cx-ui-repeater-item-control.cx-repeater-item-control-checkbox {
+  margin-top: 0;
+}
+
+#wcfm-main-contentainer #wcfm_change_vendor_membership {
+  max-width: 220px;
+}
+
+/* Fix error with filebird pro modal and wcfm media upload field */
+[dir="ltr"]
+  .fbv-modal:not(.fbv-ux-builder-modal)
+  .wcfm-image-media-modal
+  .media-frame:not(.hide-menu, .hide-router)
+  .media-frame-title,
+[dir="ltr"]
+  .fbv-modal:not(.fbv-ux-builder-modal)
+  .wcfm-image-media-modal
+  .media-frame:not(.hide-menu, .hide-router)
+  .media-frame-router,
+[dir="ltr"]
+  .fbv-modal:not(.fbv-ux-builder-modal)
+  .wcfm-image-media-modal
+  .media-frame:not(.hide-menu, .hide-router)
+  .media-frame-content,
+[dir="ltr"]
+  .fbv-modal:not(.fbv-ux-builder-modal)
+  .wcfm-image-media-modal
+  .media-frame:not(.hide-menu, .hide-router)
+  .media-frame-toolbar {
+  left: 311px !important;
+}
+
+/* Fix problem with design in fullcalendar css in wcfm panel */
+#wcfm-main-contentainer .fc table {
+  margin: 0;
+}
+
+#wcfm-main-contentainer .fc td,
+#wcfm-main-contentainer .fc th {
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  padding: 0 !important;
+}
+
+/* make full calendar events clickable */
+#wcfm-main-contentainer .fc-event {
+  cursor: pointer;
+}
+
+#wcfm-main-contentainer .add_new_wcfm_ele_dashboard.add-edit-appointment {
+  background-color: #0e76a8;
+  color: white;
+}
+
+.wcfm-top-element-container
+  .add_new_wcfm_ele_dashboard.add-edit-next_control_date {
+  background-color: #c77a05 !important;
+  color: white !important;
+}
+
+.wcfm-top-element-container .add_new_wcfm_ele_dashboard.add-edit-procedimiento {
+  background-color: #b7111e !important;
+  color: white !important;
+}
+
+/* Hide media button in prescription form */
+#wcfm_prescription_form button.insert-media {
+  display: none;
+}
+
+/* Improve display slots in appointments form */
+.container
+  .jet-apb-calendar
+  .jet-apb-calendar-slots
+  .jet-apb-calendar-slots-container {
+  gap: 10px;
+}
+
+.container .jet-apb-calendar .jet-apb-calendar-slots .jet-apb-slot {
+  margin: 0;
+  border: 1px solid var(--wd-alternative-color);
+  padding: 0 3px;
+}
+
+/* Hide appointment_price in appointments form */
+.jet-form .jet-form-row [data-field="appointment_price"] {
+  display: none !important;
+}
+
+.jet-form-row:has([data-field="appointment_price"]) {
+  display: none !important;
+}
+
+/* hide to avoid problems with only hour selector in agenda-configuracion */
+button.ui-datepicker-current {
+  display: none;
+}
+
+/* Custom color for medical history items */
+#wcfm-content
+  .wcfm-collapse-content
+  .cx-ui-container.cx-label.fecha-control
+  label {
+  font-size: 15px !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+  color: #eb8d00 !important;
+}
+
+#wcfm-content
+  .wcfm-collapse-content
+  .cx-ui-container.cx-label.fecha-procedimiento
+  label {
+  font-size: 15px !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+  color: #d6150f !important;
+}
+
+#wcfm-content
+  .wcfm-collapse-content
+  .cx-ui-container.cx-label.fecha-cita
+  label {
+  font-size: 15px !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+  color: rgb(50, 161, 175) !important;
+}
+
+.treatment-wrap .cx-label,
+.plan_to_follow-wrap .cx-label {
+  font-size: 19px !important;
+  color: #0096a5 !important; /* Azul */
+  font-weight: bold !important;
+}
+
+/* Added user specific styles*/
+body.user-343 label[for^="examen-fisico-general_piel-y-faneras-"],
+body.user-343 label[for^="examen-fisico-general_-aparato-respiratorio-"],
+body.user-343 label[for^="examen-fisico-general_aparato-cardiovascular-"],
+body.user-343 label[for^="examen-fisico-general_sistema-nervioso"],
+body.user-343 label[for^="examen-fisico-general_escala-de-glasgow-"] {
+  color: black !important;
+}
+
+/*Added style for imagen*/
+.cx-ui-container img[src*="ODONTOGRAMA"] {
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: none !important;
+  display: block;
+}
+
+/* move buttons to right in cx-vui-popup */
+#wcfm-main-contentainer .cx-vui-popup__footer {
+  justify-content: end;
+}
+
+/* Custom styles for repeater in first and second level  */
+#wcfm-main-contentainer .cx-ui-repeater-container a.cx-ui-repeater-add {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border-radius: 5px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: #fff;
+  border: 0px solid #298ffc;
+  background-color: #298ffc;
+  padding: 5px 14px;
+  min-height: 36px;
+  font-size: 12px;
+}
+
+#wcfm-main-contentainer .cx-ui-repeater-container a.cx-ui-repeater-add:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#wcfm-main-contentainer .cx-ui-repeater-container a.cx-ui-repeater-add::before {
+  color: #fff;
+}
+
+/* repeater second level */
+#wcfm-main-contentainer .cx-ui-repeater-container .cx-ui-repeater-container {
+  text-align: right;
+}
+
+#wcfm-main-contentainer
+  .cx-ui-repeater-container
+  .cx-ui-repeater-container
+  .cx-ui-repeater-list {
+  text-align: left;
+}
+
+#wcfm-main-contentainer
+  .cx-ui-repeater-container
+  .cx-ui-repeater-container
+  a.cx-ui-repeater-add {
+  border: 0px solid #29b6fc;
+  background-color: #29b6fc;
+}
+
+#wcfm-main-contentainer
+  .cx-ui-repeater-container
+  .cx-ui-repeater-container.cx-ui-repeater-container {
+  border: 2px solid #e5e5e5;
+  background: #f0f8ff;
+}
+
+/* Add custom styles for title in colorbox */
+#cboxTitle {
+  background-color: #a4afb7;
+  color: white;
+  font-weight: bold;
+}
+
+/*Observations*/
+.cx-ui-textarea-observations {
+  width: 100%;
+  min-width: 100px;
+  max-height: 200px;
+  resize: vertical;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+}
+
+.modal-reminder {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal-reminder h2 {
+  text-align: center;
+  color: #f7b731;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.modal-reminder h2 i {
+  margin-right: 8px;
+}
+
+.modal-reminder label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #333;
+}
+
+.modal-reminder select,
+.modal-reminder input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-reminder i {
+  display: block;
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.modal-reminder .form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.modal-reminder .form-row > div {
+  flex: 1;
+  min-width: 48%;
+}
+
+.modal-reminder .form-actions {
+  text-align: right;
+  margin-top: 25px;
+}
+
+.modal-reminder button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-reminder .btn-cancel {
+  background-color: #e74c3c;
+  color: white;
+  margin-right: 10px;
+}
+
+.modal-reminder .btn-save {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.modal-reminder .btn-cancel i,
+.modal-reminder .btn-save i {
+  margin-left: 8px;
+}
+.modal-unsavedModal{
+  position: fixed;
+  top: 0; left:0; right:0; bottom:0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-unsavedModal-content{
+  background: #fff;
+  padding: 1.6em;
+  border-radius: 0.9em;
+  max-width: 35em;
+  text-align: center;
+  box-shadow:  0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+.actions-unsavedModal{
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  gap:1em;
+  flex-wrap: wrap;
+}
+.actions-unsavedModal button{
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+}
+.wcfm_eddit_button{
+  background: #3498db;
+  color: white;
+}
+.wcfm_cancel_button{
+  background: #e74c3c;
+  color: white;
+}
+@keyframes fadeIn{
+  from{opacity: 0; transform: scale(0.9);}
+  to{opacity: 1;transform: scale(1);}
+}#unsavedModal {
+  z-index: 99999 !important; 
+}
+@media (max-width: 480px){
+  .actions-unsavedModal{
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .actions-unsavedModal button{
+    width: 100%;
+  }
+}

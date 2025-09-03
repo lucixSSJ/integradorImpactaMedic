@@ -1,0 +1,268 @@
+@media screen and (min-width: 641px) {
+  .page_collapsible {
+    width: 18%;
+    display: block;
+    overflow: hidden;
+    border-right: 1px solid #cccccc;
+    margin-top: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
+  .wcfm-tabWrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+  }
+  .page_collapsible + .wcfm-container {
+    width: 78%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  html[dir="rtl"] .page_collapsible + .wcfm-container {
+    left: 0;
+    right: auto;
+  }
+  .wcfm-collapse .wcfm-tabWrap .wcfm-container {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+#wcfm-main-contentainer .page_collapsible + .wcfm-container > .wcfm-content {
+  padding: 0;
+  margin: 0;
+}
+
+/* CSS for historial in wcfm-paciente-administracion and wcfm-paciente-configuracion */
+textarea.wcfm-textarea {
+  height: auto;
+}
+
+.wcfm-container .wcfm-content .cx-ui-kit.cx-ui-repeater-container {
+  padding: 8px;
+}
+
+#wcfm-content .wcfm-collapse-content .cx-label {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--wd-text-color);
+}
+
+#wcfm-content .wcfm-collapse-content textarea.cx-ui-textarea {
+  font-size: 15px;
+  height: auto;
+  color: var(--wd-text-color);
+}
+
+#wcfm-content .wcfm-collapse-content .cx-ui-kit .cx-ui-repeater-toggle {
+  color: #d9534f;
+  width: 30px;
+  height: 30px;
+  font-size: 32px;
+  line-height: 20px;
+  top: 10px;
+  left: 8px;
+}
+
+/* hide by default, updated visibility by .field_type_options select */
+#wcfm_patient_config_form .field_type_select_options,
+#wcfm_patient_config_form .field_type_image,
+#wcfm_patient_config_form .field_type_checkbox_options,
+#wcfm_patient_config_form .field_type_title_alignment,
+#wcfm_patient_config_form .field_type_title_custom_color {
+  display: none;
+}
+
+.wcfm-content.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.d-flex .cx-ui-kit {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.d-flex .cx-control__content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.d-flex .cheryr-ui-repeater-content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+.d-flex .cx-ui-repeater-item-control {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.d-flex .cx-ui-repeater-item-control:not(.cx-repeater-item-control-hidden) {
+  padding: 5px;
+}
+.d-flex .cx-ui-kit .cx-ui-repeater-item-control + .cx-ui-repeater-item-control {
+  margin-top: 0;
+}
+
+@media (min-width: 783px) {
+  #wcfm-content .wcfm-content:not(.d-flex) .cx-control__content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > label.cx-label,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-select-wrapper
+    > label.cx-label {
+    width: 35%;
+  }
+
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > input.cx-ui-text,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-select-wrapper
+    > .cx-ui-select,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-textarea,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-colorpicker-wrapper,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-media-wrap {
+    width: 60%;
+  }
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-colorpicker-wrapper,
+  #wcfm-content
+    .wcfm-content:not(.d-flex)
+    > .cx-control
+    > .cx-control__content
+    > .cx-ui-container
+    > .cx-ui-media-wrap {
+    display: inline-block;
+  }
+}
+
+/* remove titles margins */
+#wcfm-main-contentainer .cx-ui-container .h2-style,
+#wcfm-main-contentainer .cx-ui-container .h3-style,
+#wcfm-main-contentainer .cx-ui-container .h4-style,
+#wcfm-main-contentainer .cx-ui-container .h5-style {
+  float: none;
+  margin-bottom: 0%;
+}
+
+/* format css for obstetric_formula */
+#wcfm-main-contentainer .obstetric_formula_first_label-wrap,
+#wcfm-main-contentainer .obstetric_formula_1-wrap,
+#wcfm-main-contentainer .obstetric_formula_second_label-wrap,
+#wcfm-main-contentainer .obstetric_formula_2-wrap,
+#wcfm-main-contentainer .obstetric_formula_3-wrap,
+#wcfm-main-contentainer .obstetric_formula_4-wrap,
+#wcfm-main-contentainer .obstetric_formula_5-wrap {
+  width: auto;
+  flex: 0 0 auto;
+}
+
+#wcfm-main-contentainer .obstetric_formula_1-wrap label,
+#wcfm-main-contentainer .obstetric_formula_2-wrap label,
+#wcfm-main-contentainer .obstetric_formula_3-wrap label,
+#wcfm-main-contentainer .obstetric_formula_4-wrap label,
+#wcfm-main-contentainer .obstetric_formula_5-wrap label {
+  display: none;
+}
+
+#wcfm-main-contentainer .obstetric_formula_1-wrap input,
+#wcfm-main-contentainer .obstetric_formula_2-wrap input,
+#wcfm-main-contentainer .obstetric_formula_3-wrap input,
+#wcfm-main-contentainer .obstetric_formula_4-wrap input,
+#wcfm-main-contentainer .obstetric_formula_5-wrap input {
+  width: auto;
+  min-width: 40px;
+  max-width: 60px;
+}
+
+/* CSS to open a lightbox with the media library */
+#wcfm_patient_form div.preview-holder {
+  /* set mouse like button or anchor tag */
+  cursor: pointer;
+}
+
+/* responsive */
+@media (min-width: 576px) {
+  .cx-control[data-control-name="document_number"] {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  .cx-control[data-control-name="clinic_id"] {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+/*styles for obstetrical formular in antecendentes*/
+.obstetric_formula_first_label-wrap .cx-label,
+.obstetric_formula_second_label-wrap .cx-label {
+  font-size: 20px;
+}
+
+.cx-ui-repeater-item-control.medico_medico-tratante-wrap h3 {
+  color: #17a2b8;
+  font-style: italic;
+  font-size: 1.538em;
+}

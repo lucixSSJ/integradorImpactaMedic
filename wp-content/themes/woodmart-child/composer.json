@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mpdf/mpdf": "^8.1",
+        "maennchen/zipstream-php": "2.2.6",
+        "phpoffice/phpspreadsheet": "^2.1"
+    }
+}
