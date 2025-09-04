@@ -212,35 +212,22 @@ $patients_db = getPatientsByAuthor($current_user->ID);
                             'required' => 'required',
                         ],
                     ],
-                    # NUEVOS CAMPOS EN LA MISMA FILA
-'precio_metodo_wrapper' => [
-    'type' => 'html',
-    'content' => '
-        <div style="display: flex; gap: 15px; align-items: flex-end;">
-
-            <div style="flex: 1;">
-                <label for="precio_consulta">Precio consulta:</label>
-                <input type="number" 
-                       id="precio_consulta" 
-                       name="precio_consulta" 
-                       class="cx-ui-input" 
-                       placeholder="Ingrese precio" 
-                       required />
-            </div>
-
-            <div style="flex: 1;">
-                <label for="metodo_pago">Método de pago:</label>
-                <select id="metodo_pago" name="metodo_pago" class="cx-ui-select" required>
-                    <option value="">Seleccione</option>
-                    <option value="tarjeta">Tarjeta</option>
-                    <option value="yape">Yape</option>
-                    <option value="plin">Plin</option>
-                </select>
-            </div>
-
-        </div>
-    ',
-],
+                    # NUEVOS CAMPOS (Precio de consulta)
+                    'precioConsulta' => [
+                        'type' => 'text',
+                        'label' => 'Precio consulta',
+                        'placeholder' => 'Precio',
+                    ],
+                    # NUEVOS CAMPOS (Método de pago)
+                    'metodoPago' => [
+                        'type' => 'select',
+                        'label' => 'Método de pago',
+                        'options' => [
+                            '' => 'Selecciona un método de pago',
+                            '1' => 'Yape',
+                            '2' => 'Plin',
+                        ],
+                    ],               
                     'observations' => [
                         'type' => 'textarea',
                         'label' => 'Observaciones',

@@ -51,38 +51,43 @@ $default_apb = getDefaultApb($id);
                             value: $event,
                         } )"></cx-vui-time>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <cx-vui-colorpicker class="jet-apb-working-hours__main-settings" label="Color de Citas"
                         :wrapper-css="[ 'equalwidth' ]" type="hex" v-model="formData.meta.color"></cx-vui-colorpicker>
                 </div>
 
                 <!--Implementación de PRECIO BASE Y FORMA DE PAGO -- Luciano Bances -->
-                <div class="col-sm-6 col-lg-4 jet-apb-day-custom-schedule">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="cx-vui-component__meta">
-                                <label class="cx-vui-component__label">Precio base:</label>
-                                <input type="number"
-                                    v-model="apbPostMeta.custom_schedule.base_price" 
-                                    class="cx-vui-input" 
-                                    placeholder="Ingrese el precio" />
-                            </div>
+                <div class="col-sm-4">
+                    <div class="jet-apb-working-hours__main-settings cx-vui-component cx-vui-component--equalwidth">
+                        <div class="cx-vui-component__meta">
+                            <label class="cx-vui-component__label">Precio base:</label>
                         </div>
-                        <div class="col-6">
-                            <div class="cx-vui-component__meta">
-                                <label class="cx-vui-component__label">Forma de pago:</label>
-                                <select v-model="apbPostMeta.custom_schedule.payment_method" 
-                                        class="cx-vui-select">
-                                    <option disabled value="">Seleccione</option>
-                                    <option value="tarjeta">Tarjeta</option>
-                                    <option value="yape">Yape</option>
-                                    <option value="plin">Plin</option>
-                                </select>
-                            </div>
+                        <div class="cx-vui-component__meta">
+                            <input type="number"
+                                v-model="apbPostMeta.custom_schedule.base_price" 
+                                class="cx-vui-input" 
+                                placeholder="Ingrese el precio" />
                         </div>
                     </div>
                 </div>
-
+                <div class="col-sm-4">
+                    <div class="jet-apb-working-hours__main-settings cx-vui-component cx-vui-component--equalwidth">
+                        <div class="cx-vui-component__meta">
+                            <label class="cx-vui-component__label">Forma de pago:</label>
+                        </div>
+                        <div class="cx-vui-component__meta">
+                            <select v-model="apbPostMeta.custom_schedule.payment_method" 
+                                    class="cx-vui-select">
+                                <option value="">Seleccione</option>
+                                <option value="tarjeta">Tarjeta</option>
+                                <option value="yape">Yape</option>
+                                <option value="plin">Plin</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin-->
+                
             </div>
             <div class="row">
                 <div v-for="(workingHourList, dayName) in apbPostMeta.custom_schedule.working_hours" :key="dayName"
